@@ -1,0 +1,23 @@
+{
+  "name": "galerie-images",
+  "version": "1.0.0",
+  "description": "Projet cours Bases de données",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cleps14/galerie-images.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cleps14/galerie-images/issues"
+  },
+  "homepage": "https://github.com/Cleps14/galerie-images#readme",
+  "devDependencies": {
+    "express": "^4.17.1",
+    "pug": "^2.0.4"
+  }
+}
