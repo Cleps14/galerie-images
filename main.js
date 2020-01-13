@@ -1,5 +1,8 @@
+'use strict' ;
+
 const express = require ( 'express' ) ;
 const app = express () ;
+
 
 app.listen ( 2020 , function () {
     console.log ( 'You can open your favorite navigator and search the url http://localhost:2020/' ) ;
@@ -28,3 +31,5 @@ app.get ( '/visionneuse' , function ( req , res ) {
 app.get ( '/album' , function ( req , res ) {
     res.render ( 'album' ) ;
 }) ;
+
+
