@@ -32,4 +32,6 @@ app.get ( '/album' , function ( req , res ) {
     res.render ( 'album' ) ;
 }) ;
 
-
+app.get ( '/register' , function ( req , res ) {
+    res.render ( 'register' ) ;
+}) ;
