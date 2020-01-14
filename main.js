@@ -2,6 +2,7 @@
 
 const express = require ( 'express' ) ;
 const app = express () ;
+const mongoose = require ( 'mongoose' ) ;
 
 
 app.listen ( 2020 , function () {
@@ -35,3 +36,20 @@ app.get ( '/album' , function ( req , res ) {
 app.get ( '/register' , function ( req , res ) {
     res.render ( 'register' ) ;
 }) ;
+
+
+mongoose.connect('mongodb://localhost/20201/' , {useNewUrlParser : true}) ;
+
+let db = mongoose.connection ;
+
+db.once ( 'open' , function () {
+    console.log ( 'Connected to MongoDB' ) ;
+}) ;
+
+db.on ( 'error' , function ( err ) {
+    console.log ( err ) ;
+}) ;
+
+let User = require ( './schemas' ) ;
+let Image = require ( './schemas' ) ;
+let Album = require ( './schemas' ) ;
