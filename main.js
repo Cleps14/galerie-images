@@ -3,6 +3,7 @@
 const express = require ( 'express' ) ;
 const app = express () ;
 const mongoose = require ( 'mongoose' ) ;
+const bodyParser = require ( 'body-parser' ) ;
 
 
 app.listen ( 2020 , function () {
@@ -38,7 +39,7 @@ app.get ( '/register' , function ( req , res ) {
 }) ;
 
 
-mongoose.connect('mongodb://localhost/20201/' , {useNewUrlParser : true}) ;
+mongoose.connect('mongodb://localhost/27017' , {useNewUrlParser : true}) ;
 
 let db = mongoose.connection ;
 
@@ -53,3 +54,6 @@ db.on ( 'error' , function ( err ) {
 let User = require ( './schemas' ) ;
 let Image = require ( './schemas' ) ;
 let Album = require ( './schemas' ) ;
+
+app.use ( bodyParser.urlencoded ( { extended : true } ) ) ;
+app.use ( bodyParser.json () ) ;
